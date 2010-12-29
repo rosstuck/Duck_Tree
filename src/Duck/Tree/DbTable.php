@@ -10,7 +10,7 @@ use Zend_Db_Expr,
  * Base class for different variations of hierarchal tables
  * @author Ross Tuck
  */
-abstract class DbTable extends \Zend_Db_Table /*implements SourceInterface*/ {
+abstract class DbTable extends \Zend_Db_Table {
 
     /**
      * Name of class to use for nodes/rows

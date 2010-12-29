@@ -1,8 +1,6 @@
 <?php
 namespace Duck\Tree;
 
-use Duck\Tree\Source\SourceInterface;
-
 /**
  * Represents a row in the database that is also a node in a tree
  * @author Ross Tuck
