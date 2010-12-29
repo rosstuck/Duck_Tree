@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <regions id="1" label="North America"                      lft="1"  rgt="34" />
+    <regions id="2" label="Europe"                             lft="35" rgt="44" />
+    <regions id="31" label="USA"                parent_id="1"  lft="2"  rgt="27" />
+    <regions id="4" label="Canada"              parent_id="1"  lft="28" rgt="33" />
+    <regions id="5" label="Northern USA"        parent_id="31" lft="3"  rgt="10" />
+    <regions id="6" label="Southern USA"        parent_id="31" lft="11" rgt="16" />
+    <regions id="72" label="Western USA"        parent_id="31" lft="17" rgt="26" />
+    <regions id="8" label="Maine"               parent_id="5"  lft="4"  rgt="5"  />
+    <regions id="9" label="New York"            parent_id="5"  lft="6"  rgt="7"  />
+    <regions id="10" label="Maryland"           parent_id="5"  lft="8"  rgt="9"  />
+    <regions id="11" label="Florida"            parent_id="6"  lft="12" rgt="13" />
+    <regions id="12" label="Kentucky"           parent_id="6"  lft="14" rgt="15" />
+    <regions id="13" label="Idaho"              parent_id="72" lft="18" rgt="19" />
+    <regions id="30" label="California"         parent_id="72" lft="20" rgt="21" />
+    <regions id="15" label="Arizona"            parent_id="72" lft="22" rgt="23" />
+    <regions id="16" label="Oregon"             parent_id="72" lft="24" rgt="25" />
+    <regions id="17" label="Quebec"             parent_id="4"  lft="29" rgt="30" />
+    <regions id="81" label="British Columbia"   parent_id="4"  lft="31" rgt="32" />
+    <regions id="19" label="Netherlands"        parent_id="2"  lft="36" rgt="37" />
+    <regions id="20" label="Belgium"            parent_id="2"  lft="38" rgt="39" />
+    <regions id="21" label="United Kingdom"     parent_id="2"  lft="40" rgt="41" />
+    <regions id="22" label="Denmark"            parent_id="2"  lft="42" rgt="43" />
+</dataset>

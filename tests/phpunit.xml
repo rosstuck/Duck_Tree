@@ -1,0 +1,16 @@
+<phpunit bootstrap="bootstrap.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true">
+
+    <testsuite name="Tree">
+        <directory>./Tree</directory>
+    </testsuite>
+
+    <filter>
+      <whitelist>
+        <directory suffix=".php">../src</directory>
+      </whitelist>
+    </filter>
+</phpunit>

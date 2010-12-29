@@ -1,0 +1,24 @@
+About
+-----
+Duck_Tree is kinda-sorta a MPTT/NestedSet implementation for Zend_Db_Table. It
+mostly uses MPTT but in a few places it falls back on an adjacency list style
+lookups for simplicity or speed. It's also not exactly a tree structure because
+it allows multiple root nodes but I believe this to be a feature, and not a bug.
+
+Regardless of the specifics, I wrote it because I couldn't find a full-featured
+MPTT library for Zend_Db_Table. That was a year ago, and I'm a little fuzzy on
+this code now, but I've cleaned it up a bit and putting it out there. I hope it
+proves useful.
+
+Important notes
+---------------
+- Your table must have a single primary key.
+- The code assumes the following fields exist: lft, rgt, parent_id
+- The test suite included is from an older version of the library and is, in
+  honesty, not very good. I need to find the newer version and post it.
+
+Thanks to:
+----------
+- Warnar Boekkooi who added the move function and several improvements.
+- DMM Websolutions and InGoedeBanen who sponsored additional development.
+- I remember reading the django-treebeard code when I wrote this. So them too.
