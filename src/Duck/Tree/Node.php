@@ -9,18 +9,18 @@ use Duck\Tree\Source\SourceInterface;
  */
 class Node extends \Zend_Db_Table_Row_Abstract {
 
-	/**
-	 * Get the unique id for this node
-	 * @return mixed Node id
-	 */
-	public function getId() {
-		return $this->__get($this->getTable()->getIdField());
-	}
+    /**
+     * Get the unique id for this node
+     * @return mixed Node id
+     */
+    public function getId() {
+    	return $this->__get($this->getTable()->getIdField());
+    }
 
-	/**
-	 * Get the id of the parent node
-	 * @return node
-	 */
+    /**
+     * Get the id of the parent node
+     * @return node
+     */
     public function getParentId() {
         return $this->parent_id;
     }
@@ -29,7 +29,7 @@ class Node extends \Zend_Db_Table_Row_Abstract {
      * Get all children of this node, sorted from left to right
      * @return ArrayAccess
      */
-	public function getChildren() {
+    public function getChildren() {
         return $this->getTable()->getChildren($this->getId());
     }
 
@@ -110,7 +110,7 @@ class Node extends \Zend_Db_Table_Row_Abstract {
      * @return integer
      */
     public function getDescendantCount() {
-    	return ($this->rgt - $this->lft - 1) / 2;
+        return ($this->rgt - $this->lft - 1) / 2;
     }
 
     /**
@@ -120,16 +120,16 @@ class Node extends \Zend_Db_Table_Row_Abstract {
      * @return self
      */
     public function addChild(Node $row, Node $before = null) {
-    	$this->getTable()->addChild($this, $row, $before);
-    	return $this;
+        $this->getTable()->addChild($this, $row, $before);
+        return $this;
     }
 
-	/**
-	 * Close the gap left in the tree when deleting it.
-	 * @TODO: Override the delete() function to make it return the total deleted
-	 * @return Number of nodes removed.
-	 */
+    /**
+     * Close the gap left in the tree when deleting it.
+     * @TODO: Override the delete() function to make it return the total deleted
+     * @return Number of nodes removed.
+     */
     protected function _delete() {
-    	return $this->getTable()->remove($this);
+        return $this->getTable()->remove($this);
     }
 }
